@@ -14,7 +14,7 @@ sudo apt install flatpak
 
 flatpak remote-add --if-not-exists flathub <https://flathub.org/repo/flathub.flatpakrepo>
 
-### Passo 3 - renicie a máquina e depois de reiniciada abra o terminal novamente e digite
+### Passo 3 - renicie a máquina e depois de reiniciada abra o terminal novamente e digite o passo 4
 
 ### Passo 4 - digite esse comando abaixo no terminal depois de ter reiniciado o computador e ter feito todos os passos de 1 até 3
 
