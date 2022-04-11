@@ -12,7 +12,7 @@ sudo apt install flatpak
 
 ### Passo 2
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub <https://flathub.org/repo/flathub.flatpakrepo>
 
 ### Passo 3 - renicie a máquina e depois de reiniciada abra o terminal novamente e digite
 
