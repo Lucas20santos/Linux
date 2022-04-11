@@ -10,7 +10,7 @@
 
 sudo apt install flatpak
 
-### Passo 2
+### Passo 2 - retire os <> do inicio e final do comando abaixo, só deixei por que o vscode estava reclamando que tinha que modificar o arquivo .md, retire a p# do <> não esqueça c#... obrigado
 
 flatpak remote-add --if-not-exists flathub <https://flathub.org/repo/flathub.flatpakrepo>
 
