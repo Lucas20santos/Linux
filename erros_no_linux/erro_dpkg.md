@@ -8,15 +8,17 @@
 ![Imagen DPKG](./dpkg.png)
 
     Antes de ir para correção, se vc olhar a imagem, o próprio sistema já mostra uma alternativa 
-    para ajustar, mas como eu não prestava atenção nas mensagem, quebrei muito a cabeça em algo 
+    para ajustar, mas como eu não prestava atenção nas mensagens, quebrei muito a cabeça em algo 
     que era simples. Então, antes de sair pesquisando, verifique se o próprio linux não te dar 
     uma solução para o problema, caso não dê, então é melhor ir procurar.
 
-    Esse erro pode acontecer devido algum processo de instalação ter parado no meio. Isso já 
-    aconteceu comigo em algumas situaçoes:
+    Esse erro pode acontecer devido algum processo na instalação. Isso já aconteceu comigo em 
+    algumas situaçoes:
 
-    1. Meu PC derrepente travou e ao reenicia-lo percebi que não estava conseguindo atualizar ou instalar outro programa;
-    2. Parei sem querer uma instalação.
+    1. Meu PC derrepente travou e ao reenicia-lo percebi que não estava conseguindo atualizar 
+    ou instalar outro programa;
+    2. Parei sem querer uma instalação;
+    3. Do nada, não sei o que fiz ou se foi um bug do sistema, provavelmente fui eu, deu esse erro.
 
     Para resolver esse problema eu fui ao sites sobre e decobrir o que era o problema e como 
     resolver, depois de muita tentativa erro.
