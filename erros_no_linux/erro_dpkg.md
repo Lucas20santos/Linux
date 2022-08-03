@@ -19,4 +19,4 @@
 
 ### Comando
 
-    ** sudo dpkg --configure -a**
+    **sudo dpkg --configure -a**
