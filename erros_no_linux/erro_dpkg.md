@@ -2,8 +2,8 @@
 
 ## Descrição do problema
 
-    Quando vc tenta atualizar alguns pacates ou verificar se existe alguma atualização pendente, 
-    você pode encontrar esse tipo de erro, visto na figura abaixo:
+    Quando vc tenta atualizar alguns pacotes ou verificar se existe alguma atualização pendente,
+    no sistema, você pode encontrar esse tipo de erro, visto na figura abaixo:
 
 ![Imagen DPKG](./dpkg.png)
 
