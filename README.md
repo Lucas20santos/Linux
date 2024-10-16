@@ -19,6 +19,32 @@ O Kernel controla todas as principais funções do hardware, seja este um smartp
 
 As aplicações interagem com o kernel por meio de uma interface de chamada do sistema (SCI)
 
+### Kernel e o sistema operacional
+
+#### Hardware
+
+É a máquina física:
+
+- Memoria (RAM)
+- Unidade central de processamento (CPU)
+- Entrada e saída (E/S)
+    - Discos de armazenamento
+    - placa gráfica
+
+### Kernel
+
+É o núcleo do sistema operacional. Trata-se do software que reside na memória e instrui a CPU sobreo que fazer
+
+- Kernel faz a comunicação entre os processos e os servidores, que é conhecido como comunicação entre processos(IPC)
+
+#### Processo do usuário
+
+São os programas em execução gerenciado pelo Kernel.
+
+- Processos de usuário ou apenas processo
+- Espaço do usuário: O conjunto de processos dos usuário
+
+
 ### Pastas e arquivos relecionados
 
 #### Comandos Linus:
