@@ -38,6 +38,11 @@
 
 ### Comandos
 
+- ls /sys: listando os arquivos do diretório sys fora do proprio diretório.
+- ls /sys/kernel/p*: usando filtra para listar arquivos dentro do diretório /sys/kernel
+- ls /sys/kernel/s* |more: cria uma lista com os arquivos dentro do diretório /sys/kernel começando com a letra s.
+- find -name tex*: procurar o arquivo que começa com tex pelo nome.
+
 ## Criando diretórios
 
 ### Comandos
