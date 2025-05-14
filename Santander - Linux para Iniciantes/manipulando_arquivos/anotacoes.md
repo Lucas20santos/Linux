@@ -26,6 +26,14 @@
 
 ### Comandos
 
+- ls | more: ele cria uma lista com os diretorios e arquivos e digitando enter para ir passando os arquivos e diretório
+- ls p*: pega todos os arquivos que começa com a letra 'p'.
+- ls m?g*: pega todos os arquivos que começam com a letra m, na segunda letra pode ser qualquer letra e tem a terceira letra é g.
+- ls arquivo[1-3].txt ou ls arquivo[1-3]*: lista os arquivos com o nome arquivo numerodo de 1 até 3.
+- ls arquivo[2,5]*: listando apenas os arquivo2 e arquivo5
+- ls arquivo[^2,5]: não listando os arquivos2 e arquivo5
+- ls arquivo[^3-5]: não listando os arquivos3, arquivos4 e arquivo5
+
 ## Localizando arquivos
 
 ### Comandos
