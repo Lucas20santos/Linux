@@ -100,3 +100,8 @@
 ## Historicos de comandos
 
 ### Comandos
+
+- history: verifica os ultimos comando que foram realizados.
+- export HISTTIMEFORMAT="%c": comando o formato da saído do coamndo "history", mostrando mais informações.
+- set +o history: apaga a lista dos próximos comandos executados não deixando na lista do history
+- set -o history: retorna a salvar os comandos na lista do history
