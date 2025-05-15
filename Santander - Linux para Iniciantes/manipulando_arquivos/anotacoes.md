@@ -94,6 +94,9 @@
 
 ### Comandos
 
+- VI: editor de texto
+- nano: editor de texto
+
 ## Historicos de comandos
 
 ### Comandos
