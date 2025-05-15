@@ -48,12 +48,19 @@
 ### Comandos
 
 - mkdir: cria diretórios
+- mkdir nome_do_meu_diretorio
+- mkdir 'nome do meu diretorio'
 
 ## Excluíndo arquivos e Diretórios
 
 ### Comandos
 
-- 
+- rmdir: para remover diretorios
+- rmdir nome_do_meu_diretorio_que_quero_excluir
+- só pode usar esse comando se o diretorio estiver vazio, caso contrário não será possível excluir
+- rm: remover arquivos
+- rm nome do arquivo
+- Posso usar o comando 'rm -rf nome do diretorio' para excluir um diretório que tenha qualquer coisa dentro.
 
 ## Obtendo ajuda
 
