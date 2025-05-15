@@ -66,6 +66,11 @@
 
 ### Comandos
 
+- ls -l: mostra informações dos arquivos dentro do diretorio atual.
+  - l -> link simbolico
+  - d -> diretorio
+  - '-' -> arquivos
+
 ## Execultando tarefas execultivas com o root
 
 ### Comandos
