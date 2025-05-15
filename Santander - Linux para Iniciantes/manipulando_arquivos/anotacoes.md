@@ -75,6 +75,9 @@
 
 ### Comandos
 
+- cat /etc/group: comando para analisar um arquivo de texto dentro do diretorioo /etc/group
+- sudo: comando para usar atividades de administrador
+
 ## Logando como usuário root
 
 ### Comandos
