@@ -47,9 +47,13 @@
 
 ### Comandos
 
+- mkdir: cria diretórios
+
 ## Excluíndo arquivos e Diretórios
 
 ### Comandos
+
+- 
 
 ## Obtendo ajuda
 
