@@ -86,6 +86,10 @@
 
 ### Comandos
 
+- sshd: arquivo de acesso remoto
+- systemctl status sshd: verificando o status do service sshd
+- systemctl restart: reenicia o service sshd
+
 ## Trabalhando com arquivos de texto
 
 ### Comandos
