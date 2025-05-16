@@ -30,6 +30,10 @@
 
 ### Comandos
 
+- useradd convidado1 -c "Convidado Especial" -s /bin/bash -m -p $(openssl passwd crypt Senha123): criando um usuario e criptografando sua senha.
+  - p: criar senha para o usuario
+  - $(openssl passwd crypt Senha123): cryptografar a senha.
+
 ##  Adicinoando usuários a grupos
 
 ### Comandos
