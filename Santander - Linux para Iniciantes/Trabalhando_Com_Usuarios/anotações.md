@@ -55,6 +55,20 @@
 
 ### Comandos
 
+- ls -l: demostra as caracteristica de cada diretório.
+  - drwxr-x---  3 daniel  daniel  4096 mai 16 20:00 daniel: a primeira parte da saida desse comando representa as permissões de cada diretório.
+  - drwxr-x---:
+    - d: diretorio, poderia ser "-" de arquivo e "l" de link
+    - os proximos caracteres representa:
+      - dono
+      - group
+      - outros
+    - cada caracter representa:
+      - w: escrita
+      - r: leitura
+      - x: execução
+  - chown debora:GRP_ADM /adm/: o diretoiro /adm/ terá um dono, usuario debora, e pode ser lido e executado pelo grupo GRP_ADM.
+
 ##  Alterando as permissões
 
 ### Comandos
