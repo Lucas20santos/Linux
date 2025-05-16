@@ -45,6 +45,12 @@
 
 ### Comandos
 
+- groupadd GRP_ADM: criação do grupo GRP_ADM
+- groupadd GRP_VEN: criação do grupo GRP_VEN
+- groupadd GRP_TESTE: criação do grupo GRP_TESTE
+- groupdel GRP_TESTE: deletando grupo GRP_TESTE
+- useradd rodrigo -c "Rodrigo Silva" -m -s /bin/bash -p "$(openssl passwd -crypt Senha123)" -G GRP_ADM
+
 ##  Conhecendo o sistema de permissões
 
 ### Comandos
