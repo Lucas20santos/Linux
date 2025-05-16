@@ -38,6 +38,9 @@
 
 ### Comandos
 
+- usermod -G adm,sudo mariana: adicionando mariana ao grupo administrador e sudo.
+  - ela pode usar o sudo, pq ela é um usuario administrodor, mas não pode usar o root.
+
 ##  Criando um novo grupos
 
 ### Comandos
