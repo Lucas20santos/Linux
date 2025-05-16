@@ -20,6 +20,12 @@
 
 ### Comandos
 
+- useradd guest -c "Convidade" -m -e 17/05/2025: cria um usuario com tempo de expiração
+  - '-e': defini a data de experição do usuario
+- usermod guest -s /bin/bash: modifica o usuario
+- passwd guest -e: vai expirar a senha antiga e vai pedir que o usuario guest insira uma nova senha
+- cat /etc/passwd: informa os usuarios
+
 ##  Shell Script - Criando usuários em lote
 
 ### Comandos
