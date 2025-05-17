@@ -73,6 +73,12 @@
 
 ### Comandos
 
+- chmod 750 /adm/
+  - leitura: 4
+  - gravação: 2
+  - execução: 1
+  - nenhuma: 0
+
 ##  Entendendo melhor as permissões de execução para scripts
 
 ### Comandos
