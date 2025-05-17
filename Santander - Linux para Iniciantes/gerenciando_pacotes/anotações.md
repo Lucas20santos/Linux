@@ -4,6 +4,9 @@
 
 ### comandos
 
+- apt-get
+- apt
+
 ##  Atualização do sistema operacional
 
 ### comandos
