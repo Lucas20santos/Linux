@@ -2,9 +2,9 @@
 
 echo "Começando a leitura dos arquivos..."
 
-arquivo_adm="usuarios/adm.txt"
-arquivo_sec="usuarios/sec.txt"
-arquivo_ven="usuarios/ven.txt"
+arquivo_adm="../usuarios/adm.txt"
+arquivo_sec="../usuarios/sec.txt"
+arquivo_ven="../usuarios/ven.txt"
 
 # Verificando se arquivo existe e fazendo a leitura dos arquivos
 # leitura do arquivo adm.txt
