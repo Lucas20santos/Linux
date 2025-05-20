@@ -2,9 +2,9 @@
 
 echo "Começando a leitura dos arquivos..."
 
-arquivo_adm="usuarios/adm.txt"
-arquivo_sec="usuarios/sec.txt"
-arquivo_ven="usuarios/ven.txt"
+arquivo_adm="../usuarios/adm.txt"
+arquivo_sec="../usuarios/sec.txt"
+arquivo_ven="../usuarios/ven.txt"
 
 # Verificando se arquivo existe e fazendo a leitura dos arquivos
 # leitura do arquivo adm.txt
@@ -18,6 +18,8 @@ else
         echo "Criando usuário: $usuario"
         sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
         passwd "$usuario"
+
+        sudo usermod -G GRP_ADM "$usuario"
         
         done < "$arquivo_adm"
 
@@ -35,6 +37,8 @@ else
         sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
         passwd "$usuario"
 
+        sudo usermod -G GRP_SEC "$usuario"
+
         done < "$arquivo_sec"
 
         echo "Leitura do arquivo: '$arquivo_sec' concluída"
@@ -51,6 +55,8 @@ else
         sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
         passwd "$usuario"
 
+        sudo usermod -G GRP_VEN "$usuario"
+        
         done < "$arquivo_ven"
 
         echo "Leitura do arquivo: '$arquivo_ven' concluída"
