@@ -47,4 +47,3 @@ Ao automatizar o provisionamento da infraestrutura com a IaC, os desenvolvedores
 - Todos os usuários terá permissõa total dentro do diretório **público**
 - Os usuáriosnão poderão termpermissão de leitura, escrita e execução em diretórios de departamentos que eles não pertencem; 
 - Subir arquivo de script criado para a sua conta no GitHub.
-
