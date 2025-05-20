@@ -14,8 +14,10 @@ if [ ! -f "$arquivo_adm" ]; then
 else
     while IFS= read -r usuario || [[ -n "$usuario" ]]; do
 
-        echo "Processando usuário: $usuario"
-
+        echo "Criando usuário: $usuario"
+        useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
+        passwd "$usuario"
+        
         done < "$arquivo_adm"
 
         echo "Leitura do arquivo: '$arquivo_adm' concluída"
