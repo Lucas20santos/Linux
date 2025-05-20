@@ -14,9 +14,8 @@ if [ ! -f "$arquivo_adm" ]; then
 else
     while IFS= read -r usuario || [[ -n "$usuario" ]]; do
 
-        echo "Criando usuário: $usuario"
-        sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
-        passwd "$usuario"
+        echo "Deletando usuário: $usuario"
+        sudo userdel "$usuario" -r -f
         
         done < "$arquivo_adm"
 
@@ -30,9 +29,8 @@ if [ ! -f "$arquivo_sec" ]; then
 else
     while IFS= read -r usuario || [[ -n "$usuario" ]]; do
 
-        echo "Criando usuário: $usuario"
-        sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
-        passwd "$usuario"
+        echo "Deletando usuário: $usuario"
+        sudo userdel "$usuario" -r -f
 
         done < "$arquivo_sec"
 
@@ -46,9 +44,8 @@ if [ ! -f "$arquivo_ven" ]; then
 else
     while IFS= read -r usuario || [[ -n "$usuario" ]]; do
 
-        echo "Criando usuário: $usuario"
-        sudo useradd "$usuario" -c "Usuario '$usuario'" -s /bin/bash -m -p "$(openssl passwd -crypt Senha123)"
-        passwd "$usuario"
+        echo "Deletando usuário: $usuario"
+        sudo userdel "$usuario" -r -f
 
         done < "$arquivo_ven"
 
