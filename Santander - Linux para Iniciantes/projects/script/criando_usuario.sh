@@ -8,6 +8,7 @@ arquivo_ven="usuarios/ven.txt"
 
 # Verificando se arquivo existe e fazendo a leitura dos arquivos
 # leitura do arquivo adm.txt
+
 if [ ! -f "$arquivo_adm" ]; then
     echo "Erro: Arquivo '$arquivo_adm' não encontrado."
     exit 1
