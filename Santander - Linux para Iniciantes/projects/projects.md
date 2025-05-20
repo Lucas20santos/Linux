@@ -45,5 +45,5 @@ Ao automatizar o provisionamento da infraestrutura com a IaC, os desenvolvedores
 - Todo provisionamente deve ser feito em um arquivo do tipo Bash Script;
 - O dono de todos os diretórios criados será o usuário root;
 - Todos os usuários terá permissõa total dentro do diretório **público**
-- Os usuáriosnão poderão termpermissão de leitura, escrita e execução em diretórios de departamentos que eles não pertencem; 
+- Os usuários não poderão ter permissão de leitura, escrita e execução em diretórios de departamentos que eles não pertencem;
 - Subir arquivo de script criado para a sua conta no GitHub.
