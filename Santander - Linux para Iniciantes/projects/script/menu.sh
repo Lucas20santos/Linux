@@ -10,6 +10,22 @@ CIANO='\033[0;36m'
 BRANCO='\033[0;37m'
 RESET='\033[0m'
 
+# Parte 0: Exibição do menu
+function exibir_menu () 
+{
+    echo -e "${CIANO}##############################################${RESET}"
+    echo -e "${CIANO}#${RESET} ${BRANCO}        MENU DE OPÇÕES DO SISTEMA ${RESET}        ${CIANO} # ${RESET}"
+    echo -e "${CIANO}##############################################${RESET}"
+    echo -e "${AZUL}Selecione uma opção: ${RESET}"
+    echo -e "${BRANCO}1 - Mostrar informações do Sistema${RESET}"
+    echo -e "${BRANCO}2 - Listar Grupos${RESET}"
+    echo -e "${BRANCO}3 - Criar novo grupo${RESET}"
+    echo -e "${BRANCO}4 - Listar usuários${RESET}"
+    echo -e "${CIANO}5 - Sair${RESET}"
+}
+
+# Parte 1: criação da primeira opção do menu, 
+# exibição das informações do sistema operacional
 function mostrar_info()
 {
     clear
@@ -21,6 +37,7 @@ function mostrar_info()
     read -r -p "Pressione Enter para continuar... "
 }
 
+# Parte 2: listagem dos grupos
 function listar_grupos()
 {
     clear
@@ -34,41 +51,37 @@ function listar_grupos()
     read -r -p "Pressione Enter para continuar... "
 }
 
-function listar_usuarios()
-{
-    clear
-    local grupo=$1
-    arquivo_usuario="../usuarios/$grupo.txt"
-
-    while IFS= read -r usuario || [[ -n "$usuarios" ]]; do
-        echo "$usuario"
-    done < "$arquivo_usuario"
-
-    read -r -p  "Pressione Enter para continuar..."
-}
-
-function exibir_opcoes_grupos()
-{
-    echo -e "${AZUL}Selecione uma opção: ${RESET}"
-    echo -e "${BRANCO}adm - Mostrar informações do Sistema${RESET}"
-    echo -e "${BRANCO}ven - Listar Grupos${RESET}"
-    echo -e "${BRANCO}sec - Listar usuários${RESET}"
-
-    novo_grupo
-}
-
-function novo_grupo ()
-{
-    read -r -p "Digite sua opção (1 - 4): " ESCOLHA
-    echo ""
-    listar_usuarios "$ESCOLHA"
-}
-
+# Parte 3: criação de novo grupo
 function criar_novo_grupo ()
 {
     read -r -p "Informe o novo nome do grupo: " NOME_GRUPO
     sudo groupadd "$NOME_GRUPO"
     echo "$NOME_GRUPO" >> ../grupos/grupos.txt
+    listar_grupos
+    read -r -p "Pressione Enter para continuar... "
+}
+
+# Parte 4: listagem de usuarios de cada grupos
+function escolha_do_grupo_pelo_para_listar_usuarios()
+{
+    clear
+    listar_grupos
+    read -r -p "Digite sua opção: " ESCOLHA
+    echo ""
+    listar_usuarios "$ESCOLHA"
+}
+
+# Parte 4 Essa função faz a listagem dos usuario de um grupo especifico
+function listar_usuarios()
+{
+    local grupo=$1
+    arquivo_usuario="../usuarios/$grupo.txt"
+
+    while IFS= read -r usuario || [[ -n "$usuarios" ]]; do
+        echo "$usuario - grupo $grupo"
+    done < "$arquivo_usuario"
+
+    read -r -p  "Pressione Enter para continuar..."
 }
 
 function sair_menu () 
@@ -77,23 +90,11 @@ function sair_menu ()
     exit 0
 }
 
-function exibir_menu () 
-{
-    echo -e "${CIANO}##############################################${RESET}"
-    echo -e "${CIANO}#${RESET} ${BRANCO}        MENU DE OPÇÕES DO SISTEMA ${RESET}        ${CIANO} # ${RESET}"
-    echo -e "${CIANO}##############################################${RESET}"
-    echo -e "${AZUL}Selecione uma opção: ${RESET}"
-    echo -e "${BRANCO}1 - Mostrar informações do Sistema${RESET}"
-    echo -e "${BRANCO}2 - Listar Grupos${RESET}"
-    echo -e "${BRANCO}3 - Criar grupos${RESET}"
-    echo -e "${BRANCO}4 - Listar usuários${RESET}"
-    echo -e "${CIANO}5 - Sair${RESET}"
-}
-
 # --- Loop principal do menu ---
 while true; do
     clear
     exibir_menu
+
     read -r -p "Digite sua opção (1 - 4): " OPCAO
     echo "" # Linha em branco para melhor leitura
 
@@ -109,10 +110,11 @@ while true; do
         3)
             clear
             criar_novo_grupo
+            novo_grupo
         ;;
         4)
             clear
-            exibir_opcoes_grupos
+            escolha_do_grupo_pelo_para_listar_usuarios
         ;;
         5)
             clear
