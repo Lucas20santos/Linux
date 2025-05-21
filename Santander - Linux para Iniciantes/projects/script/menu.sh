@@ -10,7 +10,6 @@ CIANO='\033[0;36m'
 BRANCO='\033[0;37m'
 RESET='\033[0m'
 
-# --- Funções que serão executadas pelas opções do menu ---
 function mostrar_info()
 {
     clear
@@ -22,20 +21,30 @@ function mostrar_info()
     read -r -p "Pressione Enter para continuar... "
 }
 
-function listarGrupos () {
-    echo ""
+function listar_grupos()
+{
+    clear
+    arquivo_grupos="../grupos/grupos.txt"
+    while IFS= read -r grupo || [[ -n "$grupos" ]]; do
+
+    echo "$grupo"
+
+    done < "$arquivo_grupos"
+
+    read -r -p "Pressione Enter para continuar... "
 }
 
-function exibir_menu () {
-    echo -e "${CIANO}##############################################${RESET}"
-    echo -e "${CIANO}#${RESET} ${BRANCO}        MENU DE OPÇÕES DO SISTEMA ${RESET}        ${CIANO} # ${RESET}"
-    echo -e "${CIANO}##############################################${RESET}"
-    echo -e "${AZUL}Selecione uma opção: ${RESET}"
-    echo -e "${BRANCO}Mostrar informações do Sistema${RESET}"
-    echo -e "${BRANCO}Listar Grupos${RESET}"
-    echo -e "${BRANCO}Listar usuários${RESET}"
-    echo -e "${BRANCO}Criar grupos${RESET}"
-    echo -e "${CIANO}Sair${RESET}"
+function listar_usuarios()
+{
+    clear
+    local grupo=$1
+    arquivo_usuario="../usuarios/$grupo.txt"
+
+    while IFS= read -r usuario || [[ -n "$usuarios" ]]; do
+        echo "$usuario"
+    done < "$arquivo_usuario"
+
+    read -r -p  "Pressione Enter para continuar..."
 }
 
 function sair_menu () 
@@ -44,6 +53,18 @@ function sair_menu ()
     exit 0
 }
 
+function exibir_menu () 
+{
+    echo -e "${CIANO}##############################################${RESET}"
+    echo -e "${CIANO}#${RESET} ${BRANCO}        MENU DE OPÇÕES DO SISTEMA ${RESET}        ${CIANO} # ${RESET}"
+    echo -e "${CIANO}##############################################${RESET}"
+    echo -e "${AZUL}Selecione uma opção: ${RESET}"
+    echo -e "${BRANCO}1 - Mostrar informações do Sistema${RESET}"
+    echo -e "${BRANCO}2 - Listar Grupos${RESET}"
+    echo -e "${BRANCO}3 - Listar usuários${RESET}"
+    echo -e "${BRANCO}4 - Criar grupos${RESET}"
+    echo -e "${CIANO}5 - Sair${RESET}"
+}
 
 # --- Loop principal do menu ---
 while true; do
@@ -56,7 +77,25 @@ while true; do
         1)
             mostrar_info
         ;;
-        2|3)
+        2)
+            listar_grupos
+        ;;
+        3)
+            clear
+            echo -e "${AZUL}Selecione uma opção: ${RESET}"
+            echo -e "${BRANCO}adm - Mostrar informações do Sistema${RESET}"
+            echo -e "${BRANCO}ven - Listar Grupos${RESET}"
+            echo -e "${BRANCO}sec - Listar usuários${RESET}"
+
+            read -r -p "Digite sua opção (1 - 4): " ESCOLHA
+            echo ""
+
+            listar_usuarios "$ESCOLHA"
+        ;;
+        4)
+
+        ;;
+        5)
             sair_menu
         ;;
         *)
