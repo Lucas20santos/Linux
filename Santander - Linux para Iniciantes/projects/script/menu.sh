@@ -49,14 +49,26 @@ function listar_usuarios()
 
 function exibir_opcoes_grupos()
 {
-    echo
+    echo -e "${AZUL}Selecione uma opção: ${RESET}"
+    echo -e "${BRANCO}adm - Mostrar informações do Sistema${RESET}"
+    echo -e "${BRANCO}ven - Listar Grupos${RESET}"
+    echo -e "${BRANCO}sec - Listar usuários${RESET}"
+
+    novo_grupo
 }
 
-function criar_novo_grupo () 
+function novo_grupo ()
+{
+    read -r -p "Digite sua opção (1 - 4): " ESCOLHA
+    echo ""
+    listar_usuarios "$ESCOLHA"
+}
+
+function criar_novo_grupo ()
 {
     read -r -p "Informe o novo nome do grupo: " NOME_GRUPO
     sudo groupadd "$NOME_GRUPO"
-    echo "$NOME_GRUPO" >> ../grupos/grupos.txt            
+    echo "$NOME_GRUPO" >> ../grupos/grupos.txt
 }
 
 function sair_menu () 
@@ -87,27 +99,23 @@ while true; do
 
     case $OPCAO in
         1)
+            clear
             mostrar_info
         ;;
         2)
+            clear
             listar_grupos
         ;;
         3)
+            clear
             criar_novo_grupo
         ;;
         4)
             clear
-            echo -e "${AZUL}Selecione uma opção: ${RESET}"
-            echo -e "${BRANCO}adm - Mostrar informações do Sistema${RESET}"
-            echo -e "${BRANCO}ven - Listar Grupos${RESET}"
-            echo -e "${BRANCO}sec - Listar usuários${RESET}"
-
-            read -r -p "Digite sua opção (1 - 4): " ESCOLHA
-            echo ""
-
-            listar_usuarios "$ESCOLHA"
+            exibir_opcoes_grupos
         ;;
         5)
+            clear
             sair_menu
         ;;
         *)
