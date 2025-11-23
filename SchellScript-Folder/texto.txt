@@ -1,0 +1,5 @@
+Esse é um texto para 
+
+ser lido por um loop 
+
+em shell scripting
