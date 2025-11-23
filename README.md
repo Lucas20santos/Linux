@@ -28,8 +28,8 @@ As aplicações interagem com o kernel por meio de uma interface de chamada do s
 - Memoria (RAM)
 - Unidade central de processamento (CPU)
 - Entrada e saída (E/S)
-    - Discos de armazenamento
-    - placa gráfica
+  - Discos de armazenamento
+  - placa gráfica
 
 ### Kernel
 
@@ -44,10 +44,9 @@ São os programas em execução gerenciado pelo Kernel.
 - Processos de usuário ou apenas processo
 - Espaço do usuário: O conjunto de processos dos usuário
 
-
 ### Pastas e arquivos relecionados
 
-#### Comandos Linus:
+#### Comandos Linus
 
 Arquivos destinados ao comandos e testes desses comando.
 
@@ -63,6 +62,6 @@ Pasta destinada ao estudo da linguagem utilizada no shell do linux para a automa
 
 Pasta destinada a alguns bugs que eu encontrei no meu sistema e quais foram os comandos ultilizados para resolver.
 
-#### Referências:
+#### Referências
 
 [O que é o kernel Linux?](https://www.redhat.com/pt-br/topics/linux/what-is-the-linux-kernel)
