@@ -5,6 +5,21 @@
 result=$((12 + 11))
 echo "$result"
 
+result=$((12 - 11))
+echo "$result"
+
+result=$((12 * 11))
+echo "$result"
+
+result=$((12 / 2))
+echo "$result"
+
+result=$((12 % 11))
+echo "$result"
+
+result=$((12 ** 2))
+echo "$result"
+
 a=10
 b=2
 if ((a > b)); then
