@@ -165,16 +165,3 @@ sudo apt update
 ```
 
 ---
-
-## Se quiser, eu posso analisar seu `resolv.conf` e os DNS da sua máquina
-
-Me envie o resultado destes comandos:
-
-```bash
-ping -c 4 google.com
-ping -c 4 8.8.8.8
-cat /etc/resolv.conf
-nmcli dev show | grep DNS
-```
-
-Assim te digo exatamente onde está o problema.
